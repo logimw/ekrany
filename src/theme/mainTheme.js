@@ -1,10 +1,22 @@
 export const theme = {
   panel: '#16425b',
   panelTitle: '#16425b',
-  articles: '#81c3d7',
+  heading: '#81c3d7',
   grey100: '#F5F5F5',
   grey200: '#E6E6E6',
   black: '#000000',
+  infoBg: '#2F6690',
+  secondary: '#E5D352',
+  cardsColor: {
+    total: '#2F6690',
+    totalLight: '#abbfd2',
+    ok: '#4D935E',
+    okLight: '#b8e2c3',
+    nokNot: '#EE5A1B',
+    nokNotLight: '#de8863',
+    nok: '#A30029',
+    nokLight: '#f199a3',
+  },
   fontWeight: {
     light: 300,
     regular: 400,
@@ -17,5 +29,6 @@ export const theme = {
     m: '2.1rem',
     l: '2.4rem',
     xl: '4rem',
+    mega: '12rem',
   },
 };
