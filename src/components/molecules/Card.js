@@ -6,27 +6,33 @@ import Counter from '../atoms/Counter';
 
 const StyledWrapper = styled.div`
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  border: 2px solid ${({ theme }) => theme.grey700};
   border-radius: 10px;
   overflow: hidden;
   min-height: 380px;
-  display: grid;
-  grid-template-rows: 1fr 4fr;
+  flex: 1;
+  gap: 12px;
   margin-bottom: 1rem;
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
 `;
 
 const InnerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 20%;
   background-color: ${({ currentCardCol, theme }) =>
     currentCardCol ? theme.cardsColor[currentCardCol] : 'white'};
 
   ${({ light }) =>
     light &&
     css`
+      height: 80%;
       background-color: ${({ currentCardCol, theme }) =>
         currentCardCol ? theme.cardsColor[`${currentCardCol}Light`] : 'white'};
-    `} : false;
+    `};
 `;
 
 const Card = ({ currentCard }) => {

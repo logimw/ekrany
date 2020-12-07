@@ -1,30 +1,69 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import Info from '../components/atoms/Info';
+import Panel from '../components/organisms/Panel';
+import Header from '../components/molecules/Header';
 import GlobalStyle from '../theme/GlobalStyle';
 import { theme } from '../theme/mainTheme';
 import Card from '../components/molecules/Card';
+import Info from '../components/atoms/Info';
+import Title from '../components/molecules/Title';
 
 const GridWrapper = styled.div`
-  padding: 1rem;
+  display: flex;
+`;
+
+const GridLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
 `;
 
 const MainTemplate = () => (
   <div>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <>
-        <Info>Zawieszki</Info>
-        <GridWrapper>
-          <Card currentCard="total" />
-          <Card currentCard="ok" />
-          <Card currentCard="nok" />
-          <Card currentCard="nokNot" />
-        </GridWrapper>
-      </>
+      <GridLayout>
+        <Panel>
+          <Title title="Shop Stock" />
+          <Header title="Podsumowana ilość zawieszek w szt">
+            <Info>Zawieszki</Info>
+          </Header>
+          <GridWrapper>
+            <Card currentCard="total" />
+            <Card currentCard="ok" />
+            <Card currentCard="nok" />
+            <Card currentCard="nokNot" />
+          </GridWrapper>
+        </Panel>
+        <Panel>
+          <Title title="Statystyki" />
+          <Header title="Aktualny stan skidów">
+            <Info>Skidy</Info>
+          </Header>
+          <GridWrapper>
+            <Card currentCard="total" />
+            <Card currentCard="ok" />
+            <Card currentCard="nokNot" />
+          </GridWrapper>
+        </Panel>{' '}
+        <Panel>
+          <Title title="Statystyki" />
+          <Header title="Aktualny stan skidów">
+            <Info>Skidy</Info>
+          </Header>
+          <GridWrapper>
+            <Card currentCard="total" />
+            <Card currentCard="ok" />
+            <Card currentCard="nokNot" />
+          </GridWrapper>
+          <Header title="Aktualny stan skidów">
+            <Info>Skidy</Info>
+          </Header>
+          <GridWrapper>
+            <Card currentCard="total" />
+          </GridWrapper>
+        </Panel>
+      </GridLayout>
     </ThemeProvider>
   </div>
 );

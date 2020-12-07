@@ -1,11 +1,13 @@
 export const theme = {
   panel: '#16425b',
-  panelTitle: '#16425b',
+  panelTitle: '#606060',
   heading: '#81c3d7',
   grey100: '#F5F5F5',
   grey200: '#E6E6E6',
+  grey700: '#707070',
+  grey900: '#292929',
   black: '#000000',
-  infoBg: '#2F6690',
+  infoBg: '#132b3e',
   secondary: '#E5D352',
   cardsColor: {
     total: '#2F6690',
@@ -16,6 +18,9 @@ export const theme = {
     nokNotLight: '#de8863',
     nok: '#A30029',
     nokLight: '#f199a3',
+  },
+  cardsGradient: {
+    bgTotal: `background: linear-gradient(207deg, #abbfd2 0%,  rgb(210, 14, 255) 100%)`,
   },
   fontWeight: {
     light: 300,
