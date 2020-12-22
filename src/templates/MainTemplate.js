@@ -7,9 +7,11 @@ import { theme } from '../theme/mainTheme';
 import Card from '../components/molecules/Card';
 import Info from '../components/atoms/Info';
 import Title from '../components/molecules/Title';
+import Diagrams from '../components/molecules/Diagrams';
 
 const GridWrapper = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 const GridLayout = styled.div`
@@ -60,7 +62,7 @@ const MainTemplate = () => (
             <Info>Skidy</Info>
           </Header>
           <GridWrapper>
-            <Card currentCard="total" />
+            <Diagrams />
           </GridWrapper>
         </Panel>
       </GridLayout>
